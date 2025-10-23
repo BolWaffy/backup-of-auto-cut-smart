@@ -107,8 +107,9 @@ body:
       placeholder: https://drive.google.com/file/d/LinkID/view?usp=drive_link
     validations:
       required: true
-      pattern: "^(https?|ftp)://[^\s/$.?#].[^\s]*$"
-      message: "Please provide a valid URL (e.g., https://example.com)"
+      # The backslash for \s must be escaped as \\s in YAML to be parsed correctly by the regex engine
+      pattern: "^(https?|ftp)://[^\\s/$.?#].[^\\s]*$"
+      message: "Please provide a valid URL (e.g., https://example.com/file)"
 
   - type: textarea
     id: diagnostic-log
@@ -119,7 +120,7 @@ body:
         1. Go to the Add-on Preferences and enable **FATAL Error Reporting**.
         2. Run the operation again. When the crash window appears, choose to save the diagnostic log file (`.log`) to your computer.
         3. **Drag and drop the saved `.log` file into this text area to attach it to the issue.**
-    
+
   - type: textarea
     id: additional-context
     attributes:
