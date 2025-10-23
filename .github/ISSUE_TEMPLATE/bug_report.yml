@@ -6,24 +6,15 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to report an issue! 
+        Thanks for taking the time to report an issue!
         To help me resolve this issue quickly, please provide the details below.
-        
-  - type: input
-    id: bug-title
-    attributes:
-      label: Bug Report Title
-      description: Short description of the issue
-      placeholder: e.g., App crashes when saving a new user
-    validations:
-      required: true
 
   - type: dropdown
     id: component-environment
     attributes:
       label: 🗂️ Component Affected
       description: |
-        When did the issue occur? Which part of the add-on is the issue related to? 
+        When did the issue occur? Which part of the add-on is the issue related to?
         **When I was using the:**
       options:
         - Camera Splitting (The main 'Split Animation of Camera' functions)
@@ -81,13 +72,12 @@ body:
   - type: textarea
     id: steps-to-reproduce
     attributes:
-      label: (Steps to Reproduce)
+      label: Steps to Reproduce
       description: |
         Please provide the **exact steps** to reproduce the bug.
         1. ...
         2. ...
         3. ...
-        ...
       placeholder: |
         1. Open the attached Blender file.
         2. Select the "Camera" object.
@@ -99,7 +89,7 @@ body:
     id: expected-behavior
     attributes:
       label: 🎯 Expected Behavior
-      description: What did you expect to happen:
+      description: What did you expect to happen instead of the bug?
     validations:
       required: false
 
@@ -107,27 +97,31 @@ body:
     attributes:
       value: |
         ---
-        ## 📋 Diagnostic Log File (Required for Crashes/Critical Errors)
+        ## 🔗 Reproduction File and Diagnostic Log
 
+  - type: input
+    id: blend_link
+    attributes:
+      label: Blender File Link (Required for Reproduction)
+      description: Provide a link to a minimal Blender file that reproduces the issue (e.g., Google Drive, Dropbox, GitHub).
+      placeholder: https://drive.google.com/file/d/LinkID/view?usp=drive_link
+    validations:
+      required: true
+      pattern: "^(https?|ftp)://[^\s/$.?#].[^\s]*$"
+      message: "Please provide a valid URL (e.g., https://example.com)"
+
+  - type: textarea
+    id: diagnostic-log
+    attributes:
+      label: 📋 Diagnostic Log File (Required for Crashes/Critical Errors)
+      description: |
         If the add-on crashed or presented an unexpected error:
-        1.  Go to the Add-on Preferences and enable **FATAL Error Reporting**.
-        2.  Run the operation again. When the crash window appears, choose to save the diagnostic log file (`.log`) to your computer.
-        3.  **Drag and drop the saved `.log` file into this text area to attach it to the issue.**
-
-
- - type: input
-  id: blend_link
-  attributes:
-    label: Blender File Link
-    description: Provide a link to a minimal reproduction of the issue (e.g., GitHub repo, CodeSandbox, etc.).
-    placeholder: https://drive.google.com/file/d/LinkID/view?usp=drive_link
-  validations:
-    required: true
-    pattern: "^(https?|ftp)://[^\s/$.?#].[^\s]*$"
-    message: "Please provide a valid URL (e.g., https://example.com)"
+        1. Go to the Add-on Preferences and enable **FATAL Error Reporting**.
+        2. Run the operation again. When the crash window appears, choose to save the diagnostic log file (`.log`) to your computer.
+        3. **Drag and drop the saved `.log` file into this text area to attach it to the issue.**
     
   - type: textarea
     id: additional-context
     attributes:
       label: 🗒️ Additional Context or Notes
-      description: Add any other context or links to the Blender file that caused the issue here.
+      description: Add any other final notes here.
