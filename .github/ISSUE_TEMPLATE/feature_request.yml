@@ -1,5 +1,5 @@
 name: ✨ Feature Request
-description: Suggest an enhancement or new feature for Auto CutSmart.
+description: Suggest an enhancement or new feature for the Auto CutSmart addon.
 title: "[FEAT] <short description of the feature>"
 labels: ["feature"]
 body:
@@ -42,6 +42,13 @@ body:
     validations:
       required: false
 
+  - type: input
+    id: blender-version
+    attributes:
+      label: 🧱 Blender Version
+      description: Which Blender version are you using?
+      placeholder: e.g., 4.1.0
+
   - type: textarea
     id: additional-context
     attributes:
@@ -54,4 +61,4 @@ body:
     attributes:
       value: |
         ---
-        Thanks for helping improve the addon!
+        🙏 Thanks for helping make **Auto CutSmart** better for everyone!
