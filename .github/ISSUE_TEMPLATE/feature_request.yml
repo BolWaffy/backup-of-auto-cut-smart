@@ -1,13 +1,13 @@
 name: ✨ Feature Request
 description: Suggest an enhancement or new feature for the Auto CutSmart addon.
-title: "[FEAT] <short description of the feature>"
+title: "[FEAT] <short feature description>"
 labels: ["feature"]
 body:
   - type: markdown
     attributes:
       value: |
         # 💡 Feature Suggestion
-        Thanks for taking the time to suggest an improvement! Please clearly describe the problem you are facing and how your proposed feature would solve it.
+        Thanks for taking the time to suggest an improvement! Please clearly describe the problem you're facing and how your proposed feature would solve it.
         
         ---
 
@@ -18,7 +18,7 @@ body:
       description: |
         What problem, limitation, or pain point are you currently experiencing that this new feature would solve?
         
-        *Ex.* I'm always frustrated when [...]
+        *Example.* I'm always frustrated when [...]
       placeholder: Describe the current limitation or problem...
     validations:
       required: true
@@ -28,8 +28,8 @@ body:
     attributes:
       label: 🚀 Proposed Solution
       description: |
-        Describe your proposed feature in detail. How should it work from a user perspective?
-        If possible, include specific function names, UI placements, or settings you'd like to see.
+        Describe your proposed feature or enhancement in detail. 
+        How should it work, and how would it improve the user experience?
       placeholder: Describe the new feature in detail...
     validations:
       required: true
@@ -37,8 +37,10 @@ body:
   - type: textarea
     id: alternatives 
     attributes:
-      label: 🤔 Alternatives you've considered
-      description: A clear and concise description of any alternative solutions or features you've considered.
+      label: 🔄 Alternatives Considered
+      description: If you’ve thought about other ways to solve the problem, describe them here.
+        This helps understand your thought process and design intent.
+    placeholder: Optional — describe any other approaches you considered.
     validations:
       required: false
 
@@ -47,13 +49,16 @@ body:
     attributes:
       label: 🧱 Blender Version
       description: Which Blender version are you using?
-      placeholder: e.g., 4.1.0
+      placeholder: e.g., 4.2.0 or 3.6.5 LTS
+    validations:
+      required: false
 
   - type: textarea
     id: additional-context
     attributes:
-      label: 🗒️ Additional Context or Notes
-      description: Add any other context or screenshots about the feature request here.
+      label: 🗒️ Additional Context
+      description: Add any other context, screenshots, or mockups related to this feature request.
+      placeholder: Optional — add any helpful notes, images, or links here.
     validations:
       required: false
 
@@ -61,4 +66,5 @@ body:
     attributes:
       value: |
         ---
-        🙏 Thanks for helping make **Auto CutSmart** better for everyone!
+        🙏 **Thanks for helping improve Auto CutSmart!**  
+        Every suggestion makes the addon more powerful and helps everyone.
