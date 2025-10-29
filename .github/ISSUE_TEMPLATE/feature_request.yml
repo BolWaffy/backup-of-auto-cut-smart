@@ -8,7 +8,7 @@ body:
       value: |
         # 💡 Feature Suggestion
         Thanks for taking the time to suggest an improvement! Please clearly describe the problem you're facing and how your proposed feature would solve it.
-        
+
         ---
 
   - type: textarea
@@ -38,9 +38,10 @@ body:
     id: alternatives 
     attributes:
       label: 🔄 Alternatives Considered
-      description: If you’ve thought about other ways to solve the problem, describe them here.
+      description: |
+        If you’ve thought about other ways to solve the problem, describe them here.
         This helps understand your thought process and design intent.
-    placeholder: Optional — describe any other approaches you considered.
+      placeholder: Optional — describe any other approaches you considered.
     validations:
       required: false
 
