@@ -1,0 +1,57 @@
+name: ✨ Feature Request
+description: Suggest an enhancement or new feature for Auto CutSmart.
+title: "[FEAT] <short description of the feature>"
+labels: ["feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # 💡 Feature Suggestion
+        Thanks for taking the time to suggest an improvement! Please clearly describe the problem you are facing and how your proposed feature would solve it.
+        
+        ---
+
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: ❓ The Problem
+      description: |
+        What problem, limitation, or pain point are you currently experiencing that this new feature would solve?
+        
+        *Ex.* I'm always frustrated when [...]
+      placeholder: Describe the current limitation or problem...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: 🚀 Proposed Solution
+      description: |
+        Describe your proposed feature in detail. How should it work from a user perspective?
+        If possible, include specific function names, UI placements, or settings you'd like to see.
+      placeholder: Describe the new feature in detail...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives 
+    attributes:
+      label: 🤔 Alternatives you've considered
+      description: A clear and concise description of any alternative solutions or features you've considered.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 🗒️ Additional Context or Notes
+      description: Add any other context or screenshots about the feature request here.
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        Thanks for helping improve the addon!
