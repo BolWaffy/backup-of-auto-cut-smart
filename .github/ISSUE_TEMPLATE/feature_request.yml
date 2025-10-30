@@ -1,0 +1,71 @@
+name: ✨ Feature Request
+description: Suggest an enhancement or new feature for the Auto CutSmart addon.
+title: "[FEAT] <short feature description>"
+labels: ["feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # 💡 Feature Suggestion
+        Thanks for taking the time to suggest an improvement! Please clearly describe the problem you're facing and how your proposed feature would solve it.
+
+        ---
+
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: ❓ The Problem
+      description: |
+        What problem, limitation, or pain point are you currently experiencing that this new feature would solve?
+        
+        *Example.* I'm always frustrated when [...]
+      placeholder: Describe the current limitation or problem...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: 🚀 Proposed Solution
+      description: |
+        Describe your proposed feature or enhancement in detail. 
+        How should it work, and how would it improve the user experience?
+      placeholder: Describe the new feature in detail...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives 
+    attributes:
+      label: 🔄 Alternatives Considered
+      description: |
+        If you’ve thought about other ways to solve the problem, describe them here.
+        This helps understand your thought process and design intent.
+      placeholder: Optional — describe any other approaches you considered.
+    validations:
+      required: false
+
+  - type: input
+    id: blender-version
+    attributes:
+      label: 🧱 Blender Version
+      description: Which Blender version are you using?
+      placeholder: e.g., 4.2.0 or 3.6.5 LTS
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 🗒️ Additional Context
+      description: Add any other context, screenshots, or mockups related to this feature request.
+      placeholder: Optional — add any helpful notes, images, or links here.
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        🙏 **Thanks for helping improve Auto CutSmart!**  
+        Every suggestion makes the addon more powerful and helps everyone.

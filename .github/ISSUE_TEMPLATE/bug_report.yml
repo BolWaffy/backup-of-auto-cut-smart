@@ -1,0 +1,154 @@
+name: 🐛 Bug Report
+description: Report a bug to help improve the Auto CutSmart addon.
+title: "[BUG] <brief summary of the issue>"
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ℹ️ Important Pre-Check  
+        **Before continuing, please check the [Addon User Manual Wiki](https://github.com/BolWaffy/Auto-CutSmart-Seamless-JumpCuts/wiki).**
+        Many common setup issues and usage questions are addressed there. If you've already checked the wiki and the issue persists, please fill out the form below.  
+        
+        ---
+        
+        <br><br>
+        
+  - type: markdown
+    attributes:
+      value: |
+        # Thank you for reporting a bug!
+        Please provide the following details to help us quickly diagnose and fix the issue.
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ## 1. Environment Details (Where the Bug Occurred)
+
+  - type: input
+    id: blender-version
+    attributes:
+      label: 🧱 Blender Version
+      description: The exact version of Blender you are using (e.g., 4.1.0 or 3.6 LTS).
+      placeholder: e.g., 4.1.0
+    validations:
+      required: true
+
+  - type: input
+    id: addon-version
+    attributes:
+      label: 📦 Add-on Version
+      description: The version number of Auto CutSmart you have installed.
+      placeholder: e.g., 1.5.2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: 💻 Operating System
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Other (Please specify in the Additional Context section)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component-affected
+    attributes:
+      label: 🗂️ Component Affected
+      description: |
+        Which part of the add-on was the issue related to?  
+
+        **When I was using the:**  
+
+        - **Camera Splitting**  
+          (The main 'Split Animation of Camera' functions)
+
+        - **Custom Rendering**  
+          (The 'Auto CutSmart - Render Tool')
+
+        - **General/Other**  
+          (Preferences, installation, menus, etc.)
+
+        
+      options:
+        - Camera Splitting
+        - Custom Rendering
+        - General/Other
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ## 2. The Problem
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 📝 Describe the Bug
+      description: What exactly happened? Please provide a clear and concise description of the bug.
+      placeholder: |
+        Example: When I click 'Split Animation', Blender freezes on Stage 5 and stops responding.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: 🔄 Steps to Reproduce (CRITICAL)
+      description: |
+        Please provide the **exact, numbered steps** to reproduce the bug from a clean state.
+        1. ...
+        2. ...
+        3. ...
+      placeholder: |
+        1. Open the attached minimal Blender file.
+        2. Select the 'Camera' object.
+        3. Click the 'Split Animation' button in the Scene tab.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: 🎯 Expected Behavior
+      description: What did you expect to happen when you performed those steps?
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ## 3. Reproduction Files and Context
+
+  - type: input
+    id: blend_link
+    attributes:
+      label: 🔗 Blender File Link
+      description: Provide a link to the **Blender file** that reliably reproduces the issue (e.g., Google Drive, Dropbox, GitHub Gist).
+      placeholder: https://drive.google.com/file/d/LinkID/view?usp=drive_link
+    validations:
+      required: false
+
+  - type: textarea
+    id: diagnostic-log
+    attributes:
+      label: 📋 Diagnostic Log File (For Crashes/Critical Errors ONLY)
+      description: |
+        If the add-on crashed or presented an unexpected error, please:
+        1. Enable **FATAL Error Reporting** in the Add-on Preferences.
+        2. Repeat the operation, and when the crash window appears, choose to save the diagnostic log file (`.log`) to your computer.
+        3. **Drag and drop the saved `.log` file into this text area to attach it to the issue.**
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 🗒️ Additional Context or Notes
+      description: Add any other details that might be relevant.
