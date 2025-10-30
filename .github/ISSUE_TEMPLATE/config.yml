@@ -1,1 +1,4 @@
 blank_issues_enabled: false
+issue_templates:
+  - .github_templates/ISSUE_TEMPLATE/bug_report.yml
+  - .github_templates/ISSUE_TEMPLATE/feature_request.yml
